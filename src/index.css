@@ -1,13 +1,16 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.background-wave {
+  padding: 11% 0; /* The padding is the area for the shapes, adjust it based on the ratio of the shape*/
+  height: 100%; /* to illustrate the space for the content */
+  background: url(https://i.stack.imgur.com/mG3Vb.png) top / 100% auto,
+    url(https://i.stack.imgur.com/JSEyE.png) bottom/100% auto,
+    linear-gradient(#387dff, #387dff) content-box; /* Color between the shapes only on the content and not the padding*/
+  background-repeat: no-repeat;
 }
